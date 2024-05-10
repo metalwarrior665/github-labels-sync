@@ -2,12 +2,12 @@
     "title": "CheerioCrawler Template",
     "type": "object",
     "schemaVersion": 1,
-    "description": "Create Personal Access Token in <a href=\"https://github.com/settings/tokens?type=beta\">your GitHub account and give it Read and Write permission for Issues.\nChoose a repo as a source of correct labels and target repos to copy labels to",
+    "description": "Create Personal Access Token in <a href=\"https://github.com/settings/tokens?type=beta\">your GitHub account</a> and give it Read and Write permission for Issues.\nChoose a repo as a source of correct labels and target repos to copy labels to",
     "properties": {
         "personalAccessToken": {
             "title": "GitHub Personal Access Token",
             "type": "string",
-            "description": "Create Personal Access Token in <a href=\"https://github.com/settings/tokens?type=beta\">your GitHub account and give it Read and Write permission for Issues.",
+            "description": "Create Personal Access Token in <a href=\"https://github.com/settings/tokens?type=beta\">your GitHub account</a> and give it Read and Write permission for Issues.",
             "editor": "textfield",
             "isSecret": true
         },
