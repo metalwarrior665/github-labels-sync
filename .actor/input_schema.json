@@ -8,23 +8,20 @@
             "title": "GitHub Personal Access Token",
             "type": "string",
             "description": "Create Personal Access Token in <a href=\"https://github.com/settings/tokens?type=beta\">your GitHub account and give it Read and Write permission for Issues.",
-            "editor": "textefield",
+            "editor": "textfield",
             "isSecret": true
         },
         "sourceRepo": {
             "title": "Source repository",
             "type": "string",
             "description": "Repository that has labels you want to copy to other repos",
-            "editor": "textefield"
+            "editor": "textfield"
         },
         "targetRepos": {
             "title": "Target repositories",
             "type": "array",
             "description": "Repositories where you want to copy labels to",
-            "items": {
-                "type": "string",
-                "editor": "textefield"
-            }
+            "editor": "stringList"
         },
         "createMissing": {
             "title": "Create missing labels in target repos",
