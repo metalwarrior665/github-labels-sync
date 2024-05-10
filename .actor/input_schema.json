@@ -1,0 +1,48 @@
+{
+    "title": "CheerioCrawler Template",
+    "type": "object",
+    "schemaVersion": 1,
+    "description": "Create Personal Access Token in <a href=\"https://github.com/settings/tokens?type=beta\">your GitHub account and give it Read and Write permission for Issues.\nChoose a repo as a source of correct labels and target repos to copy labels to",
+    "properties": {
+        "personalAccessToken": {
+            "title": "GitHub Personal Access Token",
+            "type": "string",
+            "description": "Create Personal Access Token in <a href=\"https://github.com/settings/tokens?type=beta\">your GitHub account and give it Read and Write permission for Issues.",
+            "editor": "textefield",
+            "isSecret": true
+        },
+        "sourceRepo": {
+            "title": "Source repository",
+            "type": "string",
+            "description": "Repository that has labels you want to copy to other repos",
+            "editor": "textefield"
+        },
+        "targetRepos": {
+            "title": "Target repositories",
+            "type": "array",
+            "description": "Repositories where you want to copy labels to",
+            "items": {
+                "type": "string",
+                "editor": "textefield"
+            }
+        },
+        "createMissing": {
+            "title": "Create missing labels in target repos",
+            "type": "boolean",
+            "description": "Create missing labels in target repos.",
+            "default": true
+        },
+        "updateDifferent": {
+            "title": "Update existing labels in target repos",
+            "type": "boolean",
+            "description": "Update existing labels in target repos if their name matches one in the source repo.",
+            "default": true
+        },
+        "deleteExtra": {
+            "title": "Delete extra labels in target repos",
+            "type": "boolean",
+            "description": "Delete extra labels in target repos if those don't exist in source repo",
+            "default": false
+        }
+    }
+}
