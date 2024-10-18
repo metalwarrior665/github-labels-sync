@@ -47,6 +47,7 @@ const octokit = new Octokit({
 const sourceLabels = await octokit.rest.issues.listLabelsForRepo({
     owner: sourceRepo.split('/')[0],
     repo: sourceRepo.split('/')[1],
+    per_page: 1000,
 }).then((res) => res.data);
 
 log.info(`Found ${sourceLabels.length} labels in source repo ${sourceRepo}`);
@@ -55,6 +56,7 @@ for (const targetRepo of targetRepos) {
     const targetLabels = await octokit.rest.issues.listLabelsForRepo({
         owner: targetRepo.split('/')[0],
         repo: targetRepo.split('/')[1],
+        per_page: 1000,
     }).then((res) => res.data);
 
     log.info(`Found ${targetLabels.length} labels in target repo ${targetRepo}`);
